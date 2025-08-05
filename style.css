@@ -188,3 +188,46 @@ footer {
 .page-content {
     padding-top: 8rem; /* Zapewnia, że treść zaczyna się poniżej paska nawigacji */
 }
+
+/* Style dla strony głównej zgodne z nowym zdjęciem */
+.navbar h1 {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+}
+
+.hero-home .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-home .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-transform: none;
+}
+
+.hero-home .hero-content p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-buttons .social-button {
+    text-decoration: none;
+    color: #e0e0e0;
+    background-color: #2e2e4a;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.hero-buttons .social-button:hover {
+    background-color: #4a4a75;
+}
