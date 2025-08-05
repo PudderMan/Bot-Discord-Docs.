@@ -1,62 +1,113 @@
-/* Importowanie czcionki */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+/* Importowanie czcionki (możesz dostosować) */
+@import url('https://fonts.google.com/share?selection.family=Tiny5');
 /* Podstawowe style dla całej strony */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #12121e;
-    color: #e0e0e0;
-}
-
-/* Styl dla kontenera menu */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #1a1a2b;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
+    background-color: #000;
     color: #fff;
-    text-decoration: none;
-}
-
-.nav-links a {
-    margin-left: 20px;
-    color: #bbb;
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #fff;
-}
-
-/* Styl dla głównej sekcji */
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 90vh;
-    background-color: #12121e;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('tlo.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+/* Styl dla paska nawigacji */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.hero-content p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 30px;
+.logo-image {
+    height: 40px;
+    width: auto;
+}
+
+/* Styl dla głównego kontenera, który centruje panele */
+.main-container {
+    flex: 1; /* Pozwala kontenerowi na rozciągnięcie się na całą dostępną wysokość */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Podstawowy styl dla przezroczystych paneli */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.main-panel {
+    min-height: 200px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Style dla panelu z guzikami */
+.button-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
