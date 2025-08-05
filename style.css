@@ -104,7 +104,7 @@ body {
 
 /* Style dla strony głównej zgodne z nowym zdjęciem */
 .hero-home {
-    padding-top: 15vh; /* Przesuwa tekst wyżej */
+    padding-top: 10vh; /* Przesuwa tekst wyżej */
     align-items: flex-start;
 }
 
