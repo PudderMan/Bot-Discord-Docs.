@@ -1,32 +1,27 @@
-/* Importowanie czcionki z Google Fonts */
+/* Importowanie czcionki */
 @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 
 /* Podstawowe style dla całej strony */
 body {
     margin: 0;
-    font-family: 'Tiny5', sans-serif; /* Zmieniono czcionkę */
+    font-family: 'Tiny5', sans-serif;
     background-color: #000;
     color: #fff;
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* Styl dla paska nawigacji */
-.navbar {
-    display: flex;
-    justify-content: flex-start;
+/* Styl dla górnego nagłówka */
+.main-header {
+    background-color: #1a1a2b; /* Ciemny kolor nagłówka */
     padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Styl dla kontenera logo (linku <a>) */
+/* Styl dla kontenera logo i nazwy */
 .logo {
     display: flex;
     align-items: center;
@@ -35,98 +30,99 @@ body {
     color: inherit;
 }
 
-/* Styl dla obrazka logo */
 .logo-image {
     height: 40px;
     width: auto;
 }
 
-/* Styl dla tekstu z nazwą strony */
 .logo-text {
     font-size: 24px;
     font-weight: 700;
     color: #fff;
-    text-decoration: none;
 }
 
-/* Styl dla głównego kontenera, który centruje panele */
-.main-container {
-    flex: 1;
+/* Styl dla kontenera z główną treścią */
+.main-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.hero-section {
     max-width: 800px;
     width: 100%;
-    box-sizing: border-box;
 }
 
-/* Podstawowy styl dla przezroczystych paneli */
-.glass-panel {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: left;
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-.main-panel {
-    min-height: 200px;
+.hero-subtitle {
+    font-size: 18px;
+    margin: 0 auto 30px;
 }
 
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.profile-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-}
-
-.profile-info h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.profile-info p {
-    margin: 0;
-    font-size: 14px;
-    color: #ccc;
-}
-
-/* Style dla panelu z guzikami */
-.button-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
+/* Styl dla guzików */
 .button {
     display: inline-block;
-    width: 90%;
-    text-align: center;
-    padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #5865f2;
     color: #fff;
     text-decoration: none;
+    border-radius: 5px;
     font-weight: 600;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background-color: #4a54c8;
+}
+
+/* Styl dla nawigacji w prawym górnym rogu */
+.top-right-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.top-right-nav .button {
+    padding: 8px 15px;
+}
+
+/* Styl dla nawigacji na środku strony */
+.center-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Style dla stron z treścią (docs, kontakt) */
+.content-page {
+    flex-direction: column;
+    text-align: left;
+    max-width: 800px;
+}
+
+.content-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content-text {
+    font-size: 18px;
+}
+
+.content-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-page li {
+    margin-bottom: 10px;
 }
