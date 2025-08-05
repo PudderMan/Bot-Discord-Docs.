@@ -1,10 +1,10 @@
-/* Importowanie czcionek */
-@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Tiny5&display=swap');
+/* Importowanie czcionki */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* Podstawowe style dla całej strony */
 body {
     margin: 0;
-    font-family: 'Tiny5', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #000;
     color: #fff;
     min-height: 100vh;
@@ -37,7 +37,6 @@ body {
 
 .logo-text {
     font-size: 24px;
-    font-family: 'Jersey 15', sans-serif;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -56,11 +55,10 @@ body {
     box-sizing: border-box;
 }
 
-/* Style dla nagłówków na stronie głównej */
+/* Styl dla nagłówków na stronie głównej */
 .hero-title {
     font-size: 48px;
     margin-bottom: 10px;
-    font-family: 'Jersey 15', sans-serif;
 }
 
 .hero-subtitle {
@@ -106,17 +104,12 @@ body {
 .content-page {
     flex-direction: column;
     max-width: 800px;
-}
-
-/* Nowa klasa do wyśrodkowania treści */
-.centered-content {
-    text-align: center;
+    text-align: center; /* Wyśrodkowanie treści na podstronach */
 }
 
 .content-title {
     font-size: 36px;
     margin-bottom: 20px;
-    font-family: 'Jersey 15', sans-serif;
 }
 
 .content-text {
