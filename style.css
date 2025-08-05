@@ -145,3 +145,26 @@ body {
 .hero-buttons .social-button:hover {
     background-color: #4a4a75;
 }
+
+/* Nowe style dla listy w zakładce kontakt */
+.contact-list {
+    list-style: none; /* Usunięcie domyślnych punktorów */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-list li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+    font-weight: bold;
+}
