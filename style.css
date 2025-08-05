@@ -17,7 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: #0d0d1a; /* Ciemniejszy kolor paska nawigacji */
+    background-color: #161625;
     position: fixed;
     width: 90%;
     top: 0;
@@ -45,7 +45,9 @@ body {
 }
 
 .logo-container h1 {
-    display: none; /* Ukrywa tekst obok logo */
+    font-size: 1.5rem;
+    margin: 0;
+    color: #e0e0e0;
 }
 
 .social-links {
@@ -76,6 +78,35 @@ body {
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
     /* Zmień 'https://via.placeholder.com/1920x1080' na ścieżkę do obrazka tła, jeśli chcesz */
+    padding-top: 6rem; /* Dodatkowe miejsce na pasek nawigacji */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #e65c5c;
 }
 
 /* Stylizacja sekcji z treścią */
@@ -91,6 +122,15 @@ body {
     position: relative;
 }
 
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff6b6b;
+    margin: 10px auto 0;
+}
+
 .content-section p {
     max-width: 800px;
     margin: 0 auto;
@@ -102,69 +142,38 @@ body {
     padding-top: 8rem; /* Zapewnia, że treść zaczyna się poniżej paska nawigacji */
 }
 
-/* Style dla strony głównej zgodne z nowym zdjęciem */
-.hero-home {
-    padding-top: 15vh; /* Przesuwa tekst wyżej */
-    align-items: flex-start;
+/* Nowe style dla sekcji dokumentacji */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.hero-home .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10vh; /* DODATKOWE PRZESUNIĘCIE W GÓRĘ */
-}
-
-.hero-home .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    text-transform: none;
-}
-
-.hero-home .hero-content p {
-    font-size: 1.1rem;
-    max-width: 500px;
-    margin: 0 auto 2rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.hero-buttons .social-button {
-    text-decoration: none;
-    color: #e0e0e0;
-    background-color: #2e2e4a;
-    padding: 0.7rem 1.5rem;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.hero-buttons .social-button:hover {
-    background-color: #4a4a75;
-}
-
-/* Nowe style dla listy w zakładce kontakt */
-.contact-list {
-    list-style: none; /* Usunięcie domyślnych punktorów */
-    padding: 0;
-    margin: 0 auto;
-    max-width: 800px;
+.doc-card {
+    background-color: #161625;
+    padding: 2rem;
+    border-radius: 10px;
     text-align: center;
+    border: 1px solid #2e2e4a;
+    transition: transform 0.3s ease;
+    text-decoration: none; /* Usunięcie podkreślenia z linku */
+    color: inherit; /* Dziedziczenie koloru tekstu */
 }
 
-.contact-list li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
+.doc-card:hover {
+    transform: translateY(-10px);
+    background-color: #1e1e35;
 }
 
-.contact-list li::before {
-    content: '🔘';
-    position: absolute;
-    left: 0;
-    color: #ffffff;
-    font-weight: bold;
+.doc-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #ff6b6b;
+}
+
+.doc-card p {
+    font-size: 1rem;
+    margin-top: 0;
+    color: #b0b0b0;
 }
