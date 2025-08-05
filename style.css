@@ -21,24 +21,12 @@ body {
     box-sizing: border-box;
 }
 
-/* Styl dla kontenera logo i nazwy */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: inherit;
-}
-
-.logo-image {
-    height: 40px;
-    width: auto;
-}
-
+/* Styl dla logo */
 .logo-text {
     font-size: 24px;
     font-weight: 700;
     color: #fff;
+    text-decoration: none;
 }
 
 /* Styl dla kontenera z główną treścią */
