@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona główna</title>
+    <title>Strona główna - Dokumentacja</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Witaj na stronie głównej!</h1>
-    <p>Kliknij w jeden z guzików, aby przejść do innej podstrony.</p>
+    <header class="navbar">
+        <a href="index.html" class="logo">twoja.domena</a>
+        <nav class="nav-links">
+            <a href="docs.html">Docs</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="index.html">Strona główna</a>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="omnie.html"><button>O mnie</button></a>
-        <a href="kontakt.html"><button>Kontakt</button></a>
-    </nav>
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Witaj na stronie dokumentacji Discord.js</h1>
+            <p>Tutaj znajdziesz wszystkie potrzebne informacje na temat tworzenia botów w Discord.js.</p>
+        </div>
+    </main>
 
 </body>
 </html>
