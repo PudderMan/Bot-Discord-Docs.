@@ -37,7 +37,7 @@ body {
 
 .logo-text {
     font-size: 24px;
-    font-family: 'Jersey 15', sans-serif; /* Zmieniono czcionkę */
+    font-family: 'Jersey 15', sans-serif;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
@@ -48,6 +48,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
     flex-grow: 1;
     width: 100%;
@@ -55,15 +56,11 @@ body {
     box-sizing: border-box;
 }
 
-.hero-section {
-    max-width: 800px;
-    width: 100%;
-}
-
+/* Styl dla nagłówków na stronie głównej */
 .hero-title {
     font-size: 48px;
     margin-bottom: 10px;
-    font-family: 'Jersey 15', sans-serif; /* Zmieniono czcionkę */
+    font-family: 'Jersey 15', sans-serif;
 }
 
 .hero-subtitle {
@@ -108,19 +105,14 @@ body {
 /* Styl dla stron z treścią (docs, kontakt) */
 .content-page {
     flex-direction: column;
-    text-align: left; /* Domyślne wyrównanie do lewej */
+    text-align: center;
     max-width: 800px;
-}
-
-/* Nowa klasa do wyśrodkowania treści */
-.centered-content {
-    text-align: center; /* Wyrównanie do środka */
 }
 
 .content-title {
     font-size: 36px;
     margin-bottom: 20px;
-    font-family: 'Jersey 15', sans-serif; /* Zmieniono czcionkę */
+    font-family: 'Jersey 15', sans-serif;
 }
 
 .content-text {
