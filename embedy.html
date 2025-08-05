@@ -24,9 +24,28 @@
         <section class="content-section">
             <h2>Embedy</h2>
             <p>
-                Tutaj znajdzie się szczegółowy opis dotyczący tworzenia embedów,
-                wraz z przykładami kodu i obrazkami. Możesz opisać, jak ustawiać tytuły,
-                opisy, pola, stopki, miniatury i kolory.
+                setColor(color): Ustawia kolor bocznego paska embeda. Możesz używać numerów heksadecymalnych (np. 0x0099FF), nazw kolorów CSS (np. 'Blue'), czy tablic RGB (np. [0, 153, 255]).
+
+                setTitle(title): Ustawia główny tytuł embeda.
+
+                setURL(url): Ustawia adres URL, na który przechodzi kliknięcie tytułu.
+
+                setAuthor(author): Ustawia autora embeda, często z ikoną i linkiem.
+
+                setDescription(description): Ustawia główny opis embeda.
+
+                addFields(...fields): Dodaje pola do embeda. Pola mogą mieć właściwości name, value oraz opcjonalnie inline: true/false. 
+                Tutaj tez sprawa sie komplikuje bo albo piszesz kod w jednej linicje albo w kilku i tez kazda linijka w embedzie powinna wygladać tak { name: 'nagłówek', value: 'treść'}
+
+                setImage(url): Ustawia obrazek na dole embeda.
+
+                setThumbnail(url): Ustawia mniejszy obrazek w prawym górnym rogu.
+
+                setFooter(footer): Ustawia stopkę, często używaną do informacji o bocie, z opcjonalną ikoną.
+                Tutaj tak samo komplikuje sie lekko sprawa bo nie wyglada jak w innych ze 'tekst' i tyle tutaj tez musisz dodac tak samo jak w fields tylko w jednej linijce piszesz i zamiast name jest text
+
+                setTimestamp(): Dodaje znacznik czasu w stopce.
+
             </p>
             </section>
     </main>

@@ -24,9 +24,24 @@
         <section class="content-section">
             <h2>Budowa komendy</h2>
             <p>
-                W tej sekcji znajdziesz informacje na temat poprawnej budowy komend.
-                Opisz tutaj składnię, argumenty, opcje i wszystko, co jest potrzebne,
-                aby stworzyć działające komendy dla bota.
+                zaczynamy z zaimplementowaniem czegos np embedbuilder
+                const { cos, druga rzecz} = require{'discord.js'};
+                przecinek dajemy tylko jesli bedzie druga rzecz i na koniec jesli jest uzye {} musi być ;
+                następnie kod komendy musi sie zaczynac od module.export
+                module.exports = {
+                    name: 'nazwa komendy', | najlepiej nazwa taka jak pliku i musi byc przecinek na koncu 
+                    description: 'opis komendy co ona robi i takie tam',
+                    usage: 'uzycie komendy np !ban @nick',
+                teraz co uzycie komendy zrobi
+                    execute: async(message, args) => {
+                tutaj juz co ma sie zadziać np
+                        message.chanel.send('wiadomosc którą ma wyslac')
+                a jesli ma odpowiedziec graczowi to cos takiego
+                        message.reply('odpowiedz')
+                    }
+                    
+                }
+                I tak naprawde powinna wygladac standardowa komenda ktora cos pisze a jesli ma cos innego robic to zapraszam do
             </p>
             </section>
     </main>
