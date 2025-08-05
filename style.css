@@ -17,7 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: #161625;
+    background-color: #0d0d1a; /* Ciemniejszy kolor paska nawigacji */
     position: fixed;
     width: 90%;
     top: 0;
@@ -32,15 +32,20 @@ body {
     align-items: center;
 }
 
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo {
     height: 40px; /* Wysokość logo */
     margin-right: 10px;
 }
 
 .logo-container h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    color: #e0e0e0;
+    display: none; /* Ukrywa tekst obok logo */
 }
 
 .social-links {
@@ -71,35 +76,6 @@ body {
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
     /* Zmień 'https://via.placeholder.com/1920x1080' na ścieżkę do obrazka tła, jeśli chcesz */
-    padding-top: 6rem; /* Dodatkowe miejsce na pasek nawigacji */
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-}
-
-.main-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: #ff6b6b;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-}
-
-.main-button:hover {
-    background-color: #e65c5c;
 }
 
 /* Stylizacja sekcji z treścią */
@@ -115,15 +91,6 @@ body {
     position: relative;
 }
 
-.content-section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #ff6b6b;
-    margin: 10px auto 0;
-}
-
 .content-section p {
     max-width: 800px;
     margin: 0 auto;
@@ -136,6 +103,11 @@ body {
 }
 
 /* Style dla strony głównej zgodne z nowym zdjęciem */
+.hero-home {
+    padding-top: 15vh; /* Przesuwa tekst wyżej */
+    align-items: flex-start;
+}
+
 .hero-home .hero-content {
     display: flex;
     flex-direction: column;
