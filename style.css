@@ -130,14 +130,6 @@ body {
     text-align: center;
 }
 
-/* Stylizacja stopki */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #161625;
-    border-top: 2px solid #2e2e4a;
-}
-
 /* Dodatkowy styl dla treści na podstronach */
 .page-content {
     padding-top: 8rem; /* Zapewnia, że treść zaczyna się poniżej paska nawigacji */
