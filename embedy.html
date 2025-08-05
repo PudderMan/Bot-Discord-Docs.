@@ -24,30 +24,22 @@
         <section class="content-section">
             <h2>Embedy</h2>
             <p>
-                setColor(color): Ustawia kolor bocznego paska embeda. Możesz używać numerów heksadecymalnych (np. 0x0099FF), nazw kolorów CSS (np. 'Blue'), czy tablic RGB (np. [0, 153, 255]).
-
-                setTitle(title): Ustawia główny tytuł embeda.
-
-                setURL(url): Ustawia adres URL, na który przechodzi kliknięcie tytułu.
-
-                setAuthor(author): Ustawia autora embeda, często z ikoną i linkiem.
-
-                setDescription(description): Ustawia główny opis embeda.
-
-                addFields(...fields): Dodaje pola do embeda. Pola mogą mieć właściwości name, value oraz opcjonalnie inline: true/false. 
-                Tutaj tez sprawa sie komplikuje bo albo piszesz kod w jednej linicje albo w kilku i tez kazda linijka w embedzie powinna wygladać tak { name: 'nagłówek', value: 'treść'}
-
-                setImage(url): Ustawia obrazek na dole embeda.
-
-                setThumbnail(url): Ustawia mniejszy obrazek w prawym górnym rogu.
-
-                setFooter(footer): Ustawia stopkę, często używaną do informacji o bocie, z opcjonalną ikoną.
-                Tutaj tak samo komplikuje sie lekko sprawa bo nie wyglada jak w innych ze 'tekst' i tyle tutaj tez musisz dodac tak samo jak w fields tylko w jednej linijce piszesz i zamiast name jest text
-
-                setTimestamp(): Dodaje znacznik czasu w stopce.
-
+                Tworzenie embedów odbywa się za pomocą klasy `EmbedBuilder` z biblioteki discord.js.
+                Poniżej znajdziesz listę najczęściej używanych metod:
             </p>
-            </section>
+            <ul class="embed-list">
+                <li><strong title="Ustawia kolor embeda, użyj kodu hex.">.setColor()</strong></li>
+                <li><strong title="Ustawia adres url na który przekierowywuje po kliknieciu tytułu.">.setURL())</strong></li>
+                <li><strong title="Ustawia tytuł embeda.">.setTitle()</strong></li>
+                <li><strong title="Ustawia opis embeda.">.setDescription()</strong></li>
+                <li><strong title="Dodaje stopkę do embeda.">.setFooter()</strong></li>
+                <li><strong title="Dodaje pole do embeda, z tytułem i wartością.">.addFields()</strong></li>
+                <li><strong title="Ustawia obrazek główny.">.setImage()</strong></li>
+                <li><strong title="Ustawia miniaturkę.">.setThumbnail()</strong></li>
+                <li><strong title="Ustawia autora.">.setAuthor()</strong></li>
+                <li><strong title="Dodaje znacznik czasu w stopce.">.setTimestamp()</strong></li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>

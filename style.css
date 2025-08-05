@@ -113,9 +113,8 @@ body {
     position: relative;
 }
 
-/* Usunięcie pomarańczowego paska */
 .content-section h2::after {
-    display: none;
+    display: none; /* Usunięcie pomarańczowego paska */
 }
 
 .content-section p {
@@ -129,7 +128,7 @@ body {
     padding-top: 8rem;
 }
 
-/* Style dla strony głównej zgodne z nowym zdjęciem */
+/* Style dla strony głównej */
 .hero-home {
     padding-top: 15vh;
     align-items: flex-start;
@@ -175,7 +174,7 @@ body {
 
 /* Nowe style dla listy w zakładce kontakt */
 .contact-list {
-    list-style: none;
+    list-style: none; /* Usunięcie domyślnych punktorów */
     padding: 0;
     margin: 0 auto;
     max-width: 800px;
@@ -230,4 +229,30 @@ body {
     font-size: 1rem;
     margin-top: 0;
     color: #b0b0b0;
+}
+
+/* Style dla listy komend w zakładce Embedy */
+.embed-list {
+    list-style: none; /* Usuwa domyślne kropki */
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.embed-list li {
+    position: relative;
+    padding-left: 30px; /* Odstęp dla ikony */
+    margin-bottom: 15px; /* Odstęp między elementami listy */
+    font-size: 1.1rem;
+}
+
+.embed-list li::before {
+    content: '🔘'; /* Biała kropka jako punktor */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #e0e0e0; /* Biały kolor dla ikonki */
 }
