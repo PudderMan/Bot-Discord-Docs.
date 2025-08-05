@@ -104,7 +104,8 @@ body {
 .content-page {
     flex-direction: column;
     max-width: 800px;
-    text-align: center; /* Wyśrodkowanie treści na podstronach */
+    margin: 0 auto; /* To wyśrodkuje cały kontener */
+    text-align: center; /* To wyśrodkuje tekst wewnątrz kontenera */
 }
 
 .content-title {
