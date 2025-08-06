@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dokumentacja: Budowa komendy</title>
+    <title>Dokumentacja: Błędy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -23,108 +23,74 @@
     <main class="page-content">
         <section class="content-section">
             <h2>Errory które mozesz spotkac przy budowaniu bota</h2>
-            <p>
-            Błędy API (REST)
-            Te błędy otrzymasz bezpośrednio od serwera Discorda. Mają one numery, które pomagają w diagnozie.
 
-            Błędy ogólne (40xxx)
-            10008: Unknown Member - Próbujesz odwołać się do użytkownika, który nie istnieje na danym serwerze.
+            <h3>Błędy API (REST)</h3>
+            <p>Te błędy otrzymasz bezpośrednio od serwera Discorda. Mają one numery, które pomagają w diagnozie.</p>
+            <h4>Błędy ogólne (40xxx)</h4>
+            <ul>
+                <li><strong>10008: Unknown Member</strong> - Próbujesz odwołać się do użytkownika, który nie istnieje na danym serwerze.</li>
+                <li><strong>40001: Unauthorized</strong> - Używasz nieprawidłowego tokenu bota, który nie przeszedł autoryzacji.</li>
+                <li><strong>40002: Account Disabled</strong> - Konto bota zostało wyłączone.</li>
+                <li><strong>40003: Invalid Token</strong> - Token bota jest niepoprawny lub nieaktualny.</li>
+                <li><strong>40004: Rate Limited</strong> - Bot wysłał zbyt wiele zapytań w krótkim czasie.</li>
+                <li><strong>40005: Request Time Out</strong> - Zapytanie do API trwało zbyt długo.</li>
+                <li><strong>40006: Invalid Guild</strong> - Próbujesz wykonać akcję na serwerze, który nie istnieje lub bot nie ma do niego dostępu.</li>
+                <li><strong>40007: Invalid Channel</strong> - Próbujesz wykonać akcję na kanale, który nie istnieje lub jest niedostępny.</li>
+            </ul>
 
-            40001: Unauthorized - Używasz nieprawidłowego tokenu bota, który nie przeszedł autoryzacji.
+            <h4>Błędy uprawnień (50xxx)</h4>
+            <ul>
+                <li><strong>50001: Missing Access</strong> - Brak uprawnień dostępu do danego zasobu, np. próba wysłania wiadomości na kanale, do którego bot nie ma dostępu.</li>
+                <li><strong>50002: Cannot Execute</strong> - Nie można wykonać danej akcji. Np. próba edytowania wiadomości innego użytkownika lub usunięcia zbyt starej wiadomości.</li>
+                <li><strong>50003: Missing Permissions</strong> - Bot nie ma uprawnień do wykonania danej akcji, np. wyrzucenia użytkownika, który ma wyższą rolę.</li>
+                <li><strong>50005: Cannot Send Messages</strong> - Bot nie ma uprawnień do wysyłania wiadomości na danym kanale.</li>
+                <li><strong>50006: Cannot Send Empty Message</strong> - Próba wysłania pustej wiadomości (bez treści, załączników, osadzonych elementów).</li>
+                <li><strong>50007: Cannot Kick/Ban User</strong> - Nie można wyrzucić/zbanować użytkownika, ponieważ ma wyższą rolę.</li>
+                <li><strong>50008: Cannot Edit Role</strong> - Próba edytowania roli, która jest wyższa od roli bota.</li>
+                <li><strong>50013: Cannot Edit Permission</strong> - Brak uprawnień do zmiany uprawnień.</li>
+                <li><strong>50028: Invalid HTTP Header</strong> - Niepoprawny nagłówek w zapytaniu HTTP.</li>
+            </ul>
 
-            40002: Account Disabled - Konto bota zostało wyłączone.
+            <h4>Błędy zasobów (30xxx)</h4>
+            <ul>
+                <li><strong>30001: Maximum Servers</strong> - Bot osiągnął maksymalną liczbę serwerów, na których może być (maksymalnie 100 bez włączonego sharding'u).</li>
+                <li><strong>30005: Maximum Guild Channels</strong> - Serwer osiągnął maksymalną liczbę kanałów (500).</li>
+                <li><strong>30007: Maximum Guild Roles</strong> - Serwer osiągnął maksymalną liczbę ról (250).</li>
+                <li><strong>30008: Maximum Guild Emojis</strong> - Serwer osiągnął maksymalną liczbę emoji (50/250).</li>
+                <li><strong>30010: Maximum Webhooks</strong> - Serwer osiągnął maksymalną liczbę webhooków (50).</li>
+            </ul>
 
-            40003: Invalid Token - Token bota jest niepoprawny lub nieaktualny.
-            
-            40004: Rate Limited - Bot wysłał zbyt wiele zapytań w krótkim czasie.
-            
-            40005: Request Time Out - Zapytanie do API trwało zbyt długo.
-            
-            40006: Invalid Guild - Próbujesz wykonać akcję na serwerze, który nie istnieje lub bot nie ma do niego dostępu.
-            
-            40007: Invalid Channel - Próbujesz wykonać akcję na kanale, który nie istnieje lub jest niedostępny.
-                        
-            uprawnień (50xxx)
-            50001: Missing Access - Brak uprawnień dostępu do danego zasobu, np. próba wysłania wiadomości na kanale, do którego bot nie ma dostępu.
+            <h3>Błędy Gateway (WebSocket)</h3>
+            <p>Te błędy to kody zamknięcia połączenia, które dostajesz, gdy połączenie WebSocket zostanie zerwane.</p>
+            <ul>
+                <li><strong>4000: Unknown Error</strong> - Ogólny błąd. Najczęściej przejściowy.</li>
+                <li><strong>4001: Unknown Opcode</strong> - Błąd w protokole WebSocket.</li>
+                <li><strong>4003: Not Authenticated</strong> - Błędne dane uwierzytelniające.</li>
+                <li><strong>4004: Authentication Failed</strong> - Nieprawidłowy token bota.</li>
+                <li><strong>4005: Already Authenticated</strong> - Próba ponownego uwierzytelnienia, gdy bot jest już połączony.</li>
+                <li><strong>4007: Invalid Seq</strong> - Błąd w sekwencji pakietów podczas wznawiania połączenia.</li>
+                <li><strong>4008: Rate Limited</strong> - Bot wysłał za dużo zapytań WebSocket w krótkim czasie.</li>
+                <li><strong>4009: Session Timed Out</strong> - Bot nie wysyłał "heartbeat" na czas, co spowodowało wygaśnięcie sesji.</li>
+                <li><strong>4010: Invalid Shard</strong> - Niepoprawny numer sharda.</li>
+                <li><strong>4011: Sharding Required</strong> - Bot jest na zbyt wielu serwerach, aby działać bez sharding'u.</li>
+                <li><strong>4012: Invalid API Version</strong> - Bot próbuje użyć nieobsługiwanej wersji API.</li>
+                <li><strong>4013: Invalid Intents</strong> - Próba użycia nieprawidłowych lub wyłączonych intencji.</li>
+                <li><strong>4014: Disallowed Intents</strong> - Próba użycia intencji, które nie są zatwierdzone dla bota.</li>
+            </ul>
 
-            50002: Cannot Execute - Nie można wykonać danej akcji. Np. próba edytowania wiadomości innego użytkownika lub usunięcia zbyt starej wiadomości.
-
-            50003: Missing Permissions - Bot nie ma uprawnień do wykonania danej akcji, np. wyrzucenia użytkownika, który ma wyższą rolę.
-
-            50005: Cannot Send Messages - Bot nie ma uprawnień do wysyłania wiadomości na danym kanale.
-
-            50006: Cannot Send Empty Message - Próba wysłania pustej wiadomości (bez treści, załączników, osadzonych elementów).
-
-            50007: Cannot Kick/Ban User - Nie można wyrzucić/zbanować użytkownika, ponieważ ma wyższą rolę.
-
-            50008: Cannot Edit Role - Próba edytowania roli, która jest wyższa od roli bota.
-
-            50013: Cannot Edit Permission - Brak uprawnień do zmiany uprawnień.
-
-            50028: Invalid HTTP Header - Niepoprawny nagłówek w zapytaniu HTTP.
-
-            Błędy zasobów (30xxx)
-            30001: Maximum Servers - Bot osiągnął maksymalną liczbę serwerów, na których może być (maksymalnie 100 bez włączonego sharding'u).
-
-            30005: Maximum Guild Channels - Serwer osiągnął maksymalną liczbę kanałów (500).
-
-            30007: Maximum Guild Roles - Serwer osiągnął maksymalną liczbę ról (250).
-
-            30008: Maximum Guild Emojis - Serwer osiągnął maksymalną liczbę emoji (50/250).
-
-            30010: Maximum Webhooks - Serwer osiągnął maksymalną liczbę webhooków (50).
-
-            Błędy Gateway (WebSocket)
-            Te błędy to kody zamknięcia połączenia, które dostajesz, gdy połączenie WebSocket zostanie zerwane. Wskazują na problem z komunikacją między botem a serwerami Discorda.
-            
-            4000: Unknown Error - Ogólny błąd. Najczęściej przejściowy.
-            
-            4001: Unknown Opcode - Błąd w protokole WebSocket.
-            
-            4003: Not Authenticated - Błędne dane uwierzytelniające.
-            
-            4004: Authentication Failed - Nieprawidłowy token bota.
-            
-            4005: Already Authenticated - Próba ponownego uwierzytelnienia, gdy bot jest już połączony.
-            
-            4007: Invalid Seq - Błąd w sekwencji pakietów podczas wznawiania połączenia.
-            
-            4008: Rate Limited - Bot wysłał za dużo zapytań WebSocket w krótkim czasie.
-            
-            4009: Session Timed Out - Bot nie wysyłał "heartbeat" na czas, co spowodowało wygaśnięcie sesji.
-
-            4010: Invalid Shard - Niepoprawny numer sharda.
-
-            4011: Sharding Required - Bot jest na zbyt wielu serwerach, aby działać bez sharding'u.
-
-            4012: Invalid API Version - Bot próbuje użyć nieobsługiwanej wersji API.
-
-            4013: Invalid Intents - Próba użycia nieprawidłowych lub wyłączonych intencji.
-
-            4014: Disallowed Intents - Próba użycia intencji, które nie są zatwierdzone dla bota.
-
-            Błędy programistyczne
-            Te błędy wynikają z twojego własnego kodu lub używanej biblioteki, a nie z serwerów Discorda. Są specyficzne dla języka programowania (np. Python, JavaScript) i biblioteki (np. discord.py, discord.js).
-
-            AttributeError: Próbujesz odwołać się do atrybutu, który nie istnieje. Np. ctx.author.id.kick().
-            
-            TypeError: Próbujesz użyć funkcji z nieprawidłowym typem danych, np. dodanie tekstu do liczby.
-            
-            ValueError: Próba użycia wartości, która jest nieprawidłowa, np. podanie ujemnej liczby do funkcji, która wymaga dodatniej.
-            
-            CommandNotFound: Użytkownik wpisał komendę, której nie ma w kodzie.
-            
-            MissingRequiredArgument: Użytkownik nie podał wszystkich wymaganych argumentów dla komendy.
-            
-            CommandInvokeError: Ogólny błąd, który występuje w trakcie wykonania komendy. Szczegóły błędu są w środku i trzeba przejrzeć cały traceback.
-            
-            Client is not ready: Próba wykonania akcji (np. wysłania wiadomości) zanim bot w pełni połączy się z Discordem.
-            
-            Econnreset, EPIPE, ETIMEDOUT: Błędy sieciowe, które mogą występować, jeśli bot ma problemy z połączeniem z serwerami Discorda.
-
-
-            </p>
-            </section>
+            <h3>Błędy programistyczne</h3>
+            <p>Te błędy wynikają z twojego własnego kodu lub używanej biblioteki, a nie z serwerów Discorda.</p>
+            <ul>
+                <li><strong>AttributeError</strong>: Próbujesz odwołać się do atrybutu, który nie istnieje. Np. ctx.author.id.kick().</li>
+                <li><strong>TypeError</strong>: Próbujesz użyć funkcji z nieprawidłowym typem danych, np. dodanie tekstu do liczby.</li>
+                <li><strong>ValueError</strong>: Próba użycia wartości, która jest nieprawidłowa, np. podanie ujemnej liczby do funkcji, która wymaga dodatniej.</li>
+                <li><strong>CommandNotFound</strong>: Użytkownik wpisał komendę, której nie ma w kodzie.</li>
+                <li><strong>MissingRequiredArgument</strong>: Użytkownik nie podał wszystkich wymaganych argumentów dla komendy.</li>
+                <li><strong>CommandInvokeError</strong>: Ogólny błąd, który występuje w trakcie wykonania komendy. Szczegóły błędu są w środku i trzeba przejrzeć cały traceback.</li>
+                <li><strong>Client is not ready</strong>: Próba wykonania akcji (np. wysłania wiadomości) zanim bot w pełni połączy się z Discordem.</li>
+                <li><strong>Econnreset, EPIPE, ETIMEDOUT</strong>: Błędy sieciowe, które mogą występować, jeśli bot ma problemy z połączeniem z serwerami Discorda.</li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>

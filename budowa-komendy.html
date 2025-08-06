@@ -24,24 +24,25 @@
         <section class="content-section">
             <h2>Budowa komendy</h2>
             <p>
-                zaczynamy z zaimplementowaniem czegos np embedbuilder<br>
-                const { cos, druga rzecz} = require{'discord.js'};<br>
-                przecinek dajemy tylko jesli bedzie druga rzecz i na koniec jesli jest uzye {} musi być ;<br>
-                następnie kod komendy musi sie zaczynac od module.export<br>
-                module.exports = {<br>
-                    name: 'nazwa komendy', | najlepiej nazwa taka jak pliku i musi byc przecinek na koncu <br>
-                    description: 'opis komendy co ona robi i takie tam',<br>
-                    usage: 'uzycie komendy np !ban @nick',<br>
-                teraz co uzycie komendy zrobi<br>
-                    execute: async(message, args) => {<br>
-                tutaj juz co ma sie zadziać np<br>
-                        message.chanel.send('wiadomosc którą ma wyslac')<br>
-                a jesli ma odpowiedziec graczowi to cos takiego<br>
-                        message.reply('odpowiedz')<br>
-                    }<br>
-                    <br>
-                }<br>
-                I tak naprawde powinna wygladac standardowa komenda ktora cos pisze a jesli ma cos innego robic to zapraszam do <a href="budowa-komend2.html">projektowanie komend 2</a><br>
+                Zaczynamy od zaimplementowania czegoś, np. `EmbedBuilder`:
+            </p>
+            <pre class="code-block"><code>const { EmbedBuilder } = require('discord.js');
+// Przecinek dajemy tylko jeśli jest więcej niż jedna rzecz, a na końcu, jeśli użyto {}, musi być średnik.</code></pre>
+            <p>Następnie kod komendy musi zaczynać się od `module.exports`:</p>
+            <pre class="code-block"><code>module.exports = {
+    name: 'nazwa_komendy', // Najlepiej nazwa taka jak pliku i musi być przecinek na końcu
+    description: 'opis komendy co ona robi i takie tam',
+    usage: 'użycie komendy np. !ban @nick',
+    // Teraz co użycie komendy zrobi
+    execute: async(message, args) => {
+        // Tutaj już co ma się zadziać, np.
+        message.channel.send('wiadomość, którą ma wysłać');
+        // A jeśli ma odpowiedzieć graczowi, to coś takiego:
+        message.reply('odpowiedź');
+    }
+};</code></pre>
+            <p>
+                I tak naprawdę powinna wyglądać standardowa komenda, która coś pisze. A jeśli ma coś innego robić, to zapraszam do <a href="budowa-komend2.html">projektowanie komend 2</a>.
             </p>
         </section>
     </main>

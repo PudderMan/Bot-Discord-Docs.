@@ -172,9 +172,9 @@ body {
     background-color: #4a4a75;
 }
 
-/* Nowe style dla listy w zakładce kontakt */
+/* Style dla listy w zakładce kontakt */
 .contact-list {
-    list-style: none; /* Usunięcie domyślnych punktorów */
+    list-style: none;
     padding: 0;
     margin: 0 auto;
     max-width: 800px;
@@ -195,7 +195,7 @@ body {
     font-weight: bold;
 }
 
-/* Nowe style dla sekcji dokumentacji */
+/* Style dla sekcji dokumentacji */
 .docs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -222,7 +222,7 @@ body {
 .doc-card h3 {
     font-size: 1.5rem;
     margin-top: 0;
-    color: #b0b0b0; /* Zmieniony kolor tytułu na szary */
+    color: #b0b0b0;
 }
 
 .doc-card p {
@@ -233,7 +233,7 @@ body {
 
 /* Style dla listy komend w zakładce Embedy */
 .embed-list {
-    list-style: none; /* Usuwa domyślne kropki */
+    list-style: none;
     padding: 0;
     margin: 2rem auto;
     max-width: 800px;
@@ -242,17 +242,32 @@ body {
 
 .embed-list li {
     position: relative;
-    padding-left: 30px; /* Odstęp dla ikony */
-    margin-bottom: 15px; /* Odstęp między elementami listy */
+    padding-left: 30px;
+    margin-bottom: 15px;
     font-size: 1.1rem;
 }
 
 .embed-list li::before {
-    content: '🔘'; /* Biała kropka jako punktor */
+    content: '🔘';
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2rem;
-    color: #e0e0e0; /* Biały kolor dla ikonki */
+    color: #e0e0e0;
+}
+
+/* Nowy styl dla bloku kodu */
+.code-block {
+    background-color: #2f3136; /* Kolor tła Discorda dla bloków kodu */
+    border: 1px solid #222325;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    max-width: 800px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap; /* Zachowuje białe znaki, w tym łamanie linii */
+    word-break: break-all;
+    text-align: left;
 }
