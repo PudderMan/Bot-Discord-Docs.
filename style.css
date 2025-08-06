@@ -231,33 +231,30 @@ body {
     color: #b0b0b0;
 }
 
-/* Style dla listy komend w zakładce Embedy */
-.embed-list {
-    list-style: none;
-    padding: 0;
-    margin: 2rem auto;
+/* Usunięcie niestandardowych stylów dla listy embedów */
+/* Stąd usunąłem wcześniej zdefiniowane reguły dla `.embed-list` i `.embed-list li::before` */
+.content-section h3 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.content-section ul {
+    list-style: disc; /* Domyślne kropki */
+    padding-left: 20px;
     max-width: 800px;
+    margin: 0 auto 2rem;
     text-align: left;
 }
 
-.embed-list li {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 15px;
+.content-section li {
+    margin-bottom: 10px;
     font-size: 1.1rem;
 }
 
-.embed-list li::before {
-    content: '🔘';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-    color: #e0e0e0;
-}
-
-/* Nowy styl dla bloku kodu */
+/* Styl dla bloku kodu */
 .code-block {
     background-color: #2f3136; /* Kolor tła Discorda dla bloków kodu */
     border: 1px solid #222325;
@@ -267,7 +264,7 @@ body {
     max-width: 800px;
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 0.9rem;
-    white-space: pre-wrap; /* Zachowuje białe znaki, w tym łamanie linii */
+    white-space: pre-wrap;
     word-break: break-all;
     text-align: left;
 }

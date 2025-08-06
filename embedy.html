@@ -27,16 +27,26 @@
                 Tworzenie embedów odbywa się za pomocą klasy `EmbedBuilder` z biblioteki discord.js.
                 Poniżej znajdziesz listę najczęściej używanych metod:
             </p>
-            <ul class="embed-list">
-                <li><strong>.setColor()</strong>: Ustawia kolor bocznego paska embeda, użyj kodu hex.</li>
+
+            <h3>Podstawowe metody</h3>
+            <ul>
+                <li><strong>.setColor()</strong>: Ustawia kolor bocznego paska embeda. Użyj kodu hex, np. `0x0099FF`.</li>
+                <li><strong>.setTitle()</strong>: Ustawia główny tytuł embeda.</li>
+                <li><strong>.setDescription()</strong>: Ustawia główny opis embeda.</li>
                 <li><strong>.setURL()</strong>: Ustawia adres url, na który przekierowuje po kliknięciu tytułu.</li>
-                <li><strong>.setTitle()</strong>: Ustawia tytuł embeda.</li>
-                <li><strong>.setDescription()</strong>: Ustawia opis embeda.</li>
-                <li><strong>.setFooter()</strong>: Dodaje stopkę do embeda.</li>
-                <li><strong>.addFields()</strong>: Dodaje pole do embeda, z tytułem i wartością.</li>
-                <li><strong>.setImage()</strong>: Ustawia obrazek główny.</li>
+            </ul>
+
+            <h3>Zawartość embeda</h3>
+            <ul>
+                <li><strong>.addFields()</strong>: Dodaje pola do embeda. Pola mogą mieć właściwości `name`, `value` oraz opcjonalnie `inline: true/false`.</li>
+                <li><strong>.setImage()</strong>: Ustawia główny obrazek.</li>
                 <li><strong>.setThumbnail()</strong>: Ustawia miniaturkę.</li>
-                <li><strong>.setAuthor()</strong>: Ustawia autora.</li>
+            </ul>
+
+            <h3>Informacje dodatkowe</h3>
+            <ul>
+                <li><strong>.setAuthor()</strong>: Ustawia autora (imię, ikonę, URL).</li>
+                <li><strong>.setFooter()</strong>: Dodaje stopkę.</li>
                 <li><strong>.setTimestamp()</strong>: Dodaje znacznik czasu w stopce.</li>
             </ul>
         </section>
