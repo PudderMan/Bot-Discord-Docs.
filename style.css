@@ -188,7 +188,7 @@ body {
 }
 
 .contact-list li::before {
-    content: '-';
+    content: '';
     position: absolute;
     left: 0;
     color: #ff6b6b;
